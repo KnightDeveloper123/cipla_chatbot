@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#python ignores 
+python/models/all-MiniLM-L6-v2 
+python/models/LFM2-300M
