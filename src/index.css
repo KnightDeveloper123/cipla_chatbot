@@ -1,0 +1,31 @@
+/* Hide scrollbar by default */
+.scroll-container {
+  overflow-y: auto;
+  scrollbar-width: thin; /* for Firefox */
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+/* Chrome, Edge, Safari */
+.scroll-container::-webkit-scrollbar {
+  width: 6px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+/* On hover of the entire container → show scrollbar */
+.scroll-container:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+.scroll-container:hover::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.5);
+}
