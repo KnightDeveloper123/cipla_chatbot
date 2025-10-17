@@ -1,11 +1,12 @@
 import React from 'react';
-import { Box, VStack, Text, Button, Input, Icon, Avatar, Separator, Flex, IconButton, Image, Heading } from "@chakra-ui/react"
+import { Box, VStack, Text, Button, Input, Icon, Avatar, Separator, Flex, IconButton, Image, Heading, Textarea } from "@chakra-ui/react"
 import { FiPlus, FiSettings, FiHelpCircle, FiSearch } from "react-icons/fi"
 import { GoSidebarExpand } from 'react-icons/go';
 import { IoSearchSharp } from 'react-icons/io5';
 import { PiChatsBold } from 'react-icons/pi';
 import { LuMessageSquareText } from 'react-icons/lu';
 
+// @ts-ignore
 import logo from "../assets/logo.png";
 import { useParams } from 'react-router';
 
@@ -29,8 +30,10 @@ const Home: React.FC = () => {
 
                 <Flex mt={2} borderRadius={'10px'} h={"calc(100ch - 238px)"} bg={'#dee9f1'}>
                     {!titleId && <Flex h={'100%'} alignItems={'center'} justifyContent={'center'} flexDir={'column'} w={'100%'}>
-                        <Heading fontWeight={600} w={'40%'} textAlign={'center'}>Unleash AI with CiplaGPT Smarter Ideas and insights at your Fingertips</Heading>
-                        <Text>Turn imagination into impact with ChatGPT’s AI built to unlock endless possibilities and shape your ideas into intelligent results.</Text>
+                        <Heading fontSize={'24px'} fontWeight={700} w={'50%'} textAlign={'center'}>Unleash AI with CiplaGPT Smarter Ideas and insights at your Fingertips</Heading>
+                        <Text mt={4} w={'70%'} color={'gray.600'} textAlign={'center'}>Turn imagination into impact with ChatGPT’s AI built to unlock endless possibilities and shape your ideas into intelligent results.</Text>
+
+                        <Textarea w={'80%'} bg={'#fff'} borderRadius={'10px'} mt={4} rows={5} placeholder='Ask me anything...' />
                     </Flex>}
                 </Flex>
             </Box>
